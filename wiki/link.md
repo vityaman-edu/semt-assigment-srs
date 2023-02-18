@@ -9,4 +9,6 @@ https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D
 - Example 1:
 https://sceweb.uhcl.edu/helm/RUP_course_example/courseregistrationproject/indexcourse.htm
 
+-Pretty good explanation of some points in srs
+https://habr.com/ru/post/52681/
 

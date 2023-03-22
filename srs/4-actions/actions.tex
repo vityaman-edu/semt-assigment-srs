@@ -34,7 +34,7 @@
 
 \textbf{Постусловия:} -
 
-\textbf{Точки расширения:} Прецедент 4.1: Поиск рейса
+\textbf{Точки расширения:} Прецедент 4.9: Навигация между страницами сайта.
 
 
 
@@ -80,7 +80,7 @@
             дать форму, после чего пересылает ее
             \textbf{Публичному}, а тот \textbf{Клиенту}.
       \item \textbf{Клиент} вводит реквизиты карты и нажимает
-            отправить, данные отправляются в.
+            отправить, данные отправляются в 
             \textbf{Платежную систему}
       \item \textbf{Клиент} просит предоставить услугу у
             \textbf{Публичного}.
@@ -140,6 +140,7 @@
       \item \textbf{Система бронирования парковочных мест} предоставляет список свободных мест на введенный промежуток времени.
       \item \textbf{Пользователь} выбирает место из доступных.
       \item Место бронируется в \textbf{Системе}.
+      \item \textbf{Пользователь} получает номер бронирования.
 \end{enumerate}
 
 \textbf{Альтернативные последовательности:} Пользователь на месте бронирует место. \textbf{Администратор} вносит место в \textbf{Систему} в качестве забронированного.
@@ -208,7 +209,7 @@
 
 \textbf{Главная последовательность:} \textbf{Пользователь} заполняет почту и пароль в специальном окне-форме. Если данные корректны, то 
 пользователь получает доступ к кабинету, иначе выводится сообщение о некорректности введенных данных и предлагает пользователю регистрацию
-(Прецедент-4.7 Регистрация на сайте) или восстановление пароля.
+(Прецедент-4.7 Регистрация на сайте),восстановление пароля и предложение ввести заново.
 
 \textbf{Альтернативные последовательности:} После корректной регистрации пользователь сразу получает доступ к своему кабинету.
 
@@ -302,29 +303,128 @@
 
 \subsection{Просмотр состояния рейса}
 
-\textbf{Акторы:} Пользователь
+\textbf{Акторы:} Пользователь, система авиакомпании
 
-\textbf{Краткое описание:} Пользователь печатает всю страницу, на которой находится пользователь
+\textbf{Краткое описание:} Пользователь состояние полета
 
-\textbf{Главная последовательность:} \textbf{Пользователь} нажимает на кнопку печати. Система отображает формат, в котором данная страница
-будет распечатана. \textbf{Пользователь} подтверждает печать.
+\textbf{Главная последовательность:} \textbf{Пользователь} нашел рейс по Прецеденту-4.1 Поиск рейса. \textbf{Система авиакомпании}
+выдает информацию о состоянии рейса.
 
 \textbf{Альтернативные последовательности:} -
 
-\textbf{Предусловия:} Пользователь находится на странице, которую планирует распечатать.
+\textbf{Предусловия:} Прецедент-4.1 Поиск рейса
 
-\textbf{Постусловия:} Распечатанная копия страницы находится у пользователя
+\textbf{Постусловия:} -
+
+\textbf{Точки расширения:} Прецедент-4.1 Поиск рейса
+
+
+
+
+\subsection{Просмотр вложенных документов}
+
+\textbf{Акторы:} Пользователь
+
+\textbf{Краткое описание:} Пользователь просматривает сторонние документы
+
+\textbf{Главная последовательность:} \textbf{Пользователь} переходит по ссылке, ведущей на документ. Документ открывается в браузере.
+\textbf{Пользователь} просматривает документ.
+
+\textbf{Альтернативные последовательности:} -
+
+\textbf{Предусловия:} -
+
+\textbf{Постусловия:} -
 
 \textbf{Точки расширения:} -
+
 
 \newpage
 
 \subsection{Диаграммы}
 
 \begin{figure}
-      \includegraphics[width=16cm]{4-actions/use-case-payment.drawio.png}
+      \includegraphics[width=16cm]{4-actions/Way_search.jpg}
       \centering
-      \caption{Use-Case диаграмма: оплата билета}
+      \caption{Use-Case диаграмма: поиск рейса}
+\end{figure}
+
+\begin{figure}
+      \includegraphics[width=16cm]{4-actions/Look_info_pages.jpg}
+      \centering
+      \caption{Use-Case диаграмма: просмотр пользователем информационных страниц}
+\end{figure}
+
+\begin{figure}
+      \includegraphics[width=16cm]{4-actions/Paper.jpg}
+      \centering
+      \caption{Use-Case диаграмма: заполнение формы}
+\end{figure}
+
+\begin{figure}
+      \includegraphics[width=16cm]{4-actions/Book_tickets.jpg}
+      \centering
+      \caption{Use-Case диаграмма: бронирование билета}
+\end{figure}
+
+\begin{figure}
+      \includegraphics[width=16cm]{4-actions/Book_parking.jpg}
+      \centering
+      \caption{Use-Case диаграмма: бронирование паркинга}
+\end{figure}
+
+\begin{figure}
+      \includegraphics[width=16cm]{4-actions/Pay_parking.jpg}
+      \centering
+      \caption{Use-Case диаграмма: оплата паркинга}
+\end{figure}
+
+\begin{figure}
+      \includegraphics[width=16cm]{4-actions/Registration.jpg}
+      \centering
+      \caption{Use-Case диаграмма: регистрация на сайте}
+\end{figure}
+
+\begin{figure}
+      \includegraphics[width=16cm]{4-actions/Enter.jpg}
+      \centering
+      \caption{Use-Case диаграмма: вход в личный кабинет}
+\end{figure}
+
+\begin{figure}
+      \includegraphics[width=16cm]{4-actions/Navigation.jpg}
+      \centering
+      \caption{Use-Case диаграмма: навигация между страницами сайта}
+\end{figure}
+
+\begin{figure}
+      \includegraphics[width=16cm]{4-actions/News.jpg}
+      \centering
+      \caption{Use-Case диаграмма: просмотр новостей}
+\end{figure}
+
+\begin{figure}
+      \includegraphics[width=16cm]{4-actions/App_map.jpg}
+      \centering
+      \caption{Use-Case диаграмма: использование карты сайта}
+\end{figure}
+
+\begin{figure}
+      \includegraphics[width=16cm]{4-actions/Print.jpg}
+      \centering
+      \caption{Use-Case диаграмма: печать информационных страниц}
+\end{figure}
+
+\begin{figure}
+      \includegraphics[width=16cm]{4-actions/Flight-state.jpg}
+      \centering
+      \caption{Use-Case диаграмма: просмотр состояния рейса}
+\end{figure}
+
+\begin{figure}
+      \includegraphics[width=16cm]{4-actions/Documents.jpg}
+      \centering
+      \caption{Use-Case диаграмма: просмотр вложенных документов}
 \end{figure}
 
 \begin{figure}
